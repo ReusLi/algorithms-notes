@@ -8,7 +8,7 @@ class stack {
     }
 
     pop () {
-        return this.items.splice(-1)[0]
+        return this.items.shift() || 0;
     }
 }
 
@@ -32,13 +32,15 @@ const evaluate = (str) => {
             let op = ops.pop(),
                 v = vals.pop();
 
-            if (s === '(');
-            else if (s === '+') v = vals.pop() + v;
-            else if (s === '-') v = vals.pop() - v;
-            else if (s === '*') v = vals.pop() * v;
-            else if (s === '/') v = vals.pop() / v;
+            if (op === '(');
+            else if (op === '+') v = vals.pop() + v;
+            else if (op === '-') v = vals.pop() - v;
+            else if (op === '*') v = vals.pop() * v;
+            else if (op === '/') v = vals.pop() / v;
 
             vals.push(v);
+        } else {
+            vals.push(Number(s))
         }
     })
 
@@ -46,5 +48,5 @@ const evaluate = (str) => {
     return result;
 }
 
-const ev = '1 + (2 + 3)'
+const ev = '(1 * (2 + 6))'
 evaluate(ev)
