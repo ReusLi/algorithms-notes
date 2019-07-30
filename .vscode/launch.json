@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\code\\Dijkstra\\Dijkstra.js"
+            "program": "${workspaceFolder}\\code\\FixedCapacityStackOfStrings\\FixedCapacityStackOfStrings.js"
         }
     ]
 }
