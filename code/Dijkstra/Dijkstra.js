@@ -35,6 +35,7 @@ const evaluate = (str) => {
     })
 
     const result = vals.pop();
+    console.log(result)
     return result;
 }
 
