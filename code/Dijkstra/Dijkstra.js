@@ -1,6 +1,8 @@
 const stack = require('../../data-structure/stack')
 
-
+/**
+ * Dijkstra 双栈算法
+ */
 const evaluate = (str) => {
     str = str.trim().split('');
 
