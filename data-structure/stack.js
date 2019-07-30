@@ -14,7 +14,11 @@ class stack {
         return item;
     }
 
-    isEmpty() {
+    isEmpty () {
+        return this.N === 0;
+    }
+
+    size () {
         return this.N;
     }
 }
