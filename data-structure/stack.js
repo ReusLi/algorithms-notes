@@ -1,14 +1,21 @@
 class stack {
     constructor() {
         this.items = []
+        this.N = 0;
     }
 
     push (item) {
-        this.items.unshift(item)
+        this.items[this.N++] = item;
     }
 
     pop () {
-        return this.items.shift();
+        const item = this.items[--this.N];
+        this.items[this.N] = undefined;
+        return item;
+    }
+
+    isEmpty() {
+        return this.N;
     }
 }
 
