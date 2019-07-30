@@ -1,16 +1,4 @@
-class stack {
-    constructor() {
-        this.items = []
-    }
-
-    push (item) {
-        this.items.unshift(item)
-    }
-
-    pop () {
-        return this.items.shift() || 0;
-    }
-}
+const stack = require('../../data-structure/stack')
 
 
 const evaluate = (str) => {
