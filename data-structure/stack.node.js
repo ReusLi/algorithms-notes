@@ -31,6 +31,8 @@ class Stack {
         const oldFirst = this.first;
         this.first = this.first.next;
         this.N--;
-        return oldFirst;
+        return oldFirst.item;
     }
 }
+
+module.exports = Stack;

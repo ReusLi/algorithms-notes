@@ -2,7 +2,8 @@
  * 定容字符串栈
  */
 
-const Stack = require('../../data-structure/stack');
+// const Stack = require('../../data-structure/stack');
+const Stack = require('../../data-structure/stack.node');
 
 const str = 'to be or not to - be - - that - - - is';
 
