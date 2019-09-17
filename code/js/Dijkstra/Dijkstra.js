@@ -1,4 +1,4 @@
-const stack = require('../../data-structure/stack')
+const stack = require('../../../data-structure/stack')
 
 /**
  * Dijkstra 双栈算法
