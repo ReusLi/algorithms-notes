@@ -3,13 +3,13 @@ import base.base;;
 public class main {
     public static void main (String[] args) {
         quikeSort();
-        // insetion();
+        // selection();
     }
 
     /**
      * 插入排序
      */
-    public static void insetion() {
+    public static void selection() {
         Comparable[] arr = {"S", "O", "R", "T", "E", "X", "A", "M", "P", "L", "E"};
         int N = arr.length;
 
