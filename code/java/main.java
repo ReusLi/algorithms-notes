@@ -2,7 +2,8 @@ import base.base;;
 
 public class main {
     public static void main (String[] args) {
-        insetion();
+        quikeSort();
+        // insetion();
     }
 
     /**
@@ -28,7 +29,7 @@ public class main {
         int temp;
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i].compareTo(arr[j]) > 0){
+                if (base.less(arr[j], arr[i])){
                     temp = (int)arr[i];
                     arr[i] = arr[j];
                     arr[j] = temp;
