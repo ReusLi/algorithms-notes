@@ -2,8 +2,11 @@ import base.base;;
 
 public class main {
     public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
         selection();
-        // insetion();
+        insetion();
+        long endTime = System.currentTimeMillis();
+        System.out.println("程序运行时间： " + (endTime - startTime) + "ms");
     }
 
     /**
