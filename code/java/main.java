@@ -3,8 +3,9 @@ import base.base;;
 public class main {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
-        selection();
-        insetion();
+        // selection();
+        // insetion();
+        shell();
         long endTime = System.currentTimeMillis();
         System.out.println("程序运行时间： " + (endTime - startTime) + "ms");
     }
@@ -41,5 +42,28 @@ public class main {
         }
 
         base.show(arr);
+    }
+
+    /**
+     * 希尔排序
+     */
+    public static void shell() {
+        Comparable[] a = { "S", "H", "E", "L", "L", "S", "O", "R", "T", "E", "X", "A", "M", "P", "L", "E" };
+
+        int N = a.length;
+        int h = 1;
+        while (h < N / 3)
+            h = 3 * h + 1;
+
+        while (h >= 1) {
+            for (int i = h; i < N; i++) {
+                // 将a[i]插入到a[i-h], a[i-2*h], a[i-3*h]...之中
+                for (int j = i; j >= h && base.less(a[j], a[j - h]); j -= h) {
+                    base.exch(a, j, j - h);
+                }
+            }
+            h = h / 3;
+            base.show(a);
+        }
     }
 }
