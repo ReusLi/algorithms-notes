@@ -48,6 +48,7 @@ public class main {
      * 希尔排序
      */
     public static void shell() {
+        // len = 16
         Comparable[] a = { "S", "H", "E", "L", "L", "S", "O", "R", "T", "E", "X", "A", "M", "P", "L", "E" };
 
         int N = a.length;
@@ -55,15 +56,28 @@ public class main {
         while (h < N / 3)
             h = 3 * h + 1;
 
+        // h = 13
         while (h >= 1) {
             for (int i = h; i < N; i++) {
+                System.out.println("*******start*******");
                 // 将a[i]插入到a[i-h], a[i-2*h], a[i-3*h]...之中
                 for (int j = i; j >= h && base.less(a[j], a[j - h]); j -= h) {
                     base.exch(a, j, j - h);
+                    // base.show(a);
+                    System.out.println("=======");
+                    System.out.println(j);
+                    System.out.println(h);
+                    System.out.println("=======");
+                    System.out.println("");
                 }
+                System.out.println("*******end*******");
+                System.out.println("");
+                System.out.println("");
+                System.out.println("");
+                System.out.println("");
+                System.out.println("");
             }
             h = h / 3;
-            base.show(a);
         }
     }
 }
